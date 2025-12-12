@@ -7,6 +7,7 @@
 **URL:** https://www.boxofficemojo.com/year/2024/
 
 **URL:** https://www.boxofficemojo.com/year/2024/ 
+
 **Description:** This project scrapes 2024 box office data from Box Office Mojo, which contains comprehensive movie revenue information including:
 - Movie rankings 
 - Release titles 
@@ -26,7 +27,7 @@ The pipeline performs **7 data cleaning operations** on the scraped data:
 ### 6. **Add Timestamp** 
 ### 7. **Remove Empty Rows**
 
-## 📨 Sample Kafka Message
+## Sample Kafka Message
 
  {
     "rank":1,
@@ -56,36 +57,48 @@ The pipeline performs **7 data cleaning operations** on the scraped data:
 - **pip** package manager
 
 #### 3. Start Kafka with Docker Compose
-bash
+```bash
+
 docker-compose up -d
 
 Wait 20-30 seconds for Kafka to fully initialize. 
 #### 4. Verify Kafka is running
-bash
+```bash
+
+
 docker-compose ps
 
 ## Running the Pipeline ### Execute the script
-bash
+```bash
+
+
 py script.py
 
 ## Verifying Data in Kafka
 
 ### Check if topic was created
-bash
+```bash
+
 docker exec -it kafka kafka-topics --bootstrap-server localhost:9092 --list
 
 ### View messages in Kafka (first 5)
-bash
+```bash
+
+
 docker exec -it kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic bonus_22B030358 --from-beginning --max-messages 5
 
 ### Get topic statistics
-bash
+```bash
+
+
 docker exec -it kafka kafka-topics --describe --topic bonus_22B030358 --bootstrap-server localhost:9092
 
 ### Count total messages
-bash
+```bash
+
 docker exec -it kafka kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic bonus_22B030358
 
 ### Stopping
-bash
+```bash
 docker-compose down
+
