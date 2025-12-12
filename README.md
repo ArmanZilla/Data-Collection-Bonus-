@@ -67,7 +67,8 @@ Wait 20-30 seconds for Kafka to fully initialize.
 docker-compose ps
 ```
 
-## Running the Pipeline ### Execute the script
+## Running the Pipeline 
+ы### Execute the script
 ```bash
 py script.py
 ```
