@@ -68,7 +68,7 @@ docker-compose ps
 ```
 
 ## Running the Pipeline 
-ы### Execute the script
+### Execute the script
 ```bash
 py script.py
 ```
