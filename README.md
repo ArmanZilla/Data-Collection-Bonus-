@@ -29,19 +29,16 @@ The pipeline performs **7 data cleaning operations** on the scraped data:
 
 ## Sample Kafka Message
 
- {
+  {
     "rank":1,
     "release":"Inside Out 2",
-    "genre":"-",
-    "budget":"-",
-    "running_time":"-",
     "gross":652980194,
     "theaters":"4,440",
     "total_gross":652980194,
     "release_date":"Jun 14",
     "distributor":"Walt Disney Studios Motion Pictures",
     "estimated":"false",
-    "scraped_at":"2025-12-12T17:49:09.772544"
+    "scraped_at":"2025-12-13T11:51:57.221047"
   }
 
 **Message Format:** 
